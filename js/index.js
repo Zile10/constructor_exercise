@@ -33,15 +33,19 @@ function PersonDetails(firstName, lastName, email) {
   this.setEmail = (newEmail) => {
     this.email = newEmail
   }
+
+  this.display = () => {
+    console.table(this);
+  }
 }
 
 
 
 const personData = new PersonDetails('john', 'vuli-gate', 'john@gate.com');
-console.table(personData);
+personData.display()
 
 console.log(personData.getFirstName());
 
 personData.setEmail('joe@gmail.com')
 
-console.table(personData);
+personData.display()
